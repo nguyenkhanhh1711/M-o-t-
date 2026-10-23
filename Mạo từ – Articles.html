@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mạo từ – Articles</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#2f8fd8;--c2:#a78bfa;--c3:#6cb8ff;--ink:#1c2340;--soft:#6b7399;--bg:#fbfbff;--card:rgba(255,255,255,.82);--line:rgba(130,130,250,.28);--ok:#22a06b;--no:#e5484d;--dot:rgba(130,140,250,.28);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e8ebff;--soft:#a3abd6;--bg:#12142a;--card:rgba(32,36,72,.78);--line:rgba(140,150,255,.3);--dot:rgba(140,150,255,.25)}}
+:root[data-theme="dark"]{--ink:#e8ebff;--soft:#a3abd6;--bg:#12142a;--card:rgba(32,36,72,.78);--line:rgba(140,150,255,.3);--dot:rgba(140,150,255,.25)}
+*{box-sizing:border-box}
+html{scroll-snap-type:y proximity;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:radial-gradient(var(--dot) 1.2px,transparent 1.5px) 0 0/26px 26px;-webkit-mask-image:linear-gradient(#000,transparent 90%);mask-image:linear-gradient(#000,transparent 90%)}
+.vl{position:fixed;inset:0;z-index:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 38px,var(--dot) 38px 39px);opacity:.35;-webkit-mask-image:linear-gradient(#000,transparent 55%);mask-image:linear-gradient(#000,transparent 55%)}
+.star{position:absolute;width:var(--s,70px);height:var(--s,70px);background:linear-gradient(135deg,#4f7df5,#a78bfa);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);filter:drop-shadow(0 0 14px #7f8cff);animation:tw 4s ease-in-out infinite}
+@keyframes tw{50%{transform:scale(1.25) rotate(25deg);opacity:.65}}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:4px;width:0;background:linear-gradient(90deg,var(--c1),var(--c2));z-index:30}
+#dots{position:fixed;right:10px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:10px}
+#dots button{width:11px;height:11px;border-radius:50%;border:2px solid var(--c2);background:transparent;padding:0;cursor:pointer;transition:.3s}#dots button.on{background:var(--c2);transform:scale(1.5)}
+.sec{position:relative;z-index:1;min-height:100vh;scroll-snap-align:start;max-width:820px;margin:0 auto;padding:64px 36px 40px 16px;display:flex;flex-direction:column;justify-content:center}
+.rv{opacity:0;transform:translateY(46px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+h2.t{font-weight:600;letter-spacing:-.03em;font-size:clamp(26px,6vw,40px);margin:.2em 0 .5em;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+h3{margin:.4em 0;font-weight:600}
+.top{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));left:16px;right:36px;display:flex;align-items:center;gap:14px;font-size:20px;font-weight:500;color:var(--soft)}.top i{flex:1;height:1px;background:var(--line)}
+.hero{align-items:flex-start}
+.big{font:500 clamp(46px,15vw,140px)/1 'Inter';letter-spacing:-.05em;background:linear-gradient(90deg,#2f8fd8,#a78bfa 50%,#6cb8ff);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;margin:10px 0 0}
+.tag{position:absolute;right:2%;bottom:-18px;background:var(--card);color:var(--c1);font-size:clamp(14px,3.4vw,22px);font-weight:600;padding:8px 16px;border-radius:14px;box-shadow:0 10px 30px rgba(110,120,250,.3);transform:rotate(-6deg);letter-spacing:0;-webkit-text-fill-color:var(--c1)}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;border-bottom:1.5px solid var(--c2);padding-bottom:4px;margin-top:14vh;color:var(--ink)}
+.pill{display:inline-flex;gap:8px;align-items:center;margin-top:50px;padding:10px 22px;border-radius:99px;border:1.5px solid var(--c2);background:rgba(167,139,250,.14);color:var(--c2);font:600 13px 'Inter';cursor:pointer;box-shadow:0 8px 28px rgba(167,139,250,.35);transition:.3s}.pill:hover{transform:translateY(-3px)}
+.foot{position:absolute;left:16px;bottom:calc(22px + env(safe-area-inset-bottom,0px));font-size:13px;color:var(--soft)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin:12px 0;backdrop-filter:blur(10px);box-shadow:0 12px 34px rgba(110,120,250,.12)}
+p{line-height:1.75;margin:.5em 0}
+.tb{width:100%;border-collapse:collapse;font-size:14.5px}.tb th{background:linear-gradient(90deg,var(--c1),var(--c2));color:#fff;padding:9px;text-align:left}.tb th:first-child{border-radius:12px 0 0 0}.tb th:last-child{border-radius:0 12px 0 0}.tb td{padding:10px 8px;border-bottom:1px dashed var(--line);vertical-align:top;line-height:1.6}.tb b{color:var(--c1)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.warn{border-left:5px solid #f5a524;background:rgba(245,165,36,.12);border-radius:14px;padding:14px;margin:12px 0;line-height:1.7}
+.ok2{border-left:5px solid var(--ok)}.bad{border-left:5px solid var(--c2)}
+.ex{color:var(--c1);font-weight:600}
+/* mindmap */
+.mm{display:flex;flex-direction:column;align-items:center}
+.root{padding:14px 30px;border-radius:99px;background:linear-gradient(90deg,var(--c1),var(--c2));color:#fff;font-weight:700;letter-spacing:.14em;box-shadow:0 0 34px rgba(127,140,255,.55);position:relative}
+.root:after{content:'';position:absolute;left:50%;top:100%;width:2px;height:24px;background:var(--line)}
+.br{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:24px;position:relative;width:100%}
+.br:before{content:'';position:absolute;top:-1px;left:16%;right:16%;height:2px;background:var(--line)}
+.b{position:relative;margin-top:22px;cursor:pointer;transition:.3s;padding-top:14px}.b:hover{transform:translateY(-6px)}
+.b:before{content:'';position:absolute;left:50%;top:-22px;width:2px;height:22px;background:var(--line)}
+.b h3{margin:0;font-size:18px}.b small{color:var(--soft);display:block;margin-bottom:8px}
+.b ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}.b li{font-size:13.5px;padding:7px 10px;border-radius:12px;background:rgba(167,139,250,.14);line-height:1.45}
+@media(max-width:700px){.br:before,.b:before{display:none}.b{margin-top:0}}
+/* quiz */
+.prog{height:8px;border-radius:9px;background:var(--line);overflow:hidden}.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--c1),var(--c2));transition:.5s}
+.meta{display:flex;justify-content:space-between;color:var(--soft);font-weight:600;font-size:13px;margin:8px 0}
+.qq{font-size:19px;line-height:1.6;font-weight:600}
+.gap{display:inline-block;min-width:64px;border-bottom:2px dashed var(--c2);text-align:center;color:var(--c1)}
+.ops{display:grid;gap:8px;margin:6px 0}.ops.short{grid-template-columns:repeat(auto-fit,minmax(78px,1fr))}.lb{color:var(--soft);font-weight:600;font-size:12px;margin-top:8px;display:block}
+.opt{text-align:left;padding:11px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 15px 'Inter';cursor:pointer;transition:.2s}
+.ops.short .opt{text-align:center}.opt:hover:not(:disabled){transform:translateY(-2px);border-color:var(--c2)}.opt.sel{border-color:var(--c2);background:rgba(167,139,250,.2)}
+.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok);animation:pop .4s}.opt.no{background:var(--no);color:#fff;border-color:var(--no);animation:shk .4s}
+@keyframes pop{50%{transform:scale(1.05)}}@keyframes shk{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}@keyframes in{from{opacity:0;transform:translateY(14px)}}
+.exp{margin-top:12px;padding:12px 14px;border-radius:14px;background:rgba(108,184,255,.2);animation:in .4s;line-height:1.65;font-size:14.5px}
+.btn{font:600 14px 'Inter';border:0;background:linear-gradient(90deg,var(--c1),var(--c2));color:#fff;padding:10px 20px;border-radius:99px;cursor:pointer;margin-top:10px;transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(110,120,250,.4)}
+.done{text-align:center;padding:16px}.done .sc{font:500 56px 'Inter';letter-spacing:-.04em;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.end{text-align:center;margin-top:20px;color:var(--soft)}
+</style>
+</head>
+<body>
+<div class="bg"><span class="star" style="--s:70px;right:12%;top:12%"></span><span class="star" style="--s:100px;left:6%;bottom:14%;animation-delay:-2s"></span><span class="star" style="--s:26px;left:45%;top:60%;animation-delay:-1s"></span></div><div class="vl"></div>
+<div id="bar"></div><nav id="dots"></nav>
+
+<section class="sec hero" id="s0">
+<div class="top">GRAMMAR LAB<i></i></div>
+<div class="chip">✦ Chuyên đề ngữ pháp, học thật dễ nhớ</div>
+<h1 class="big" style="margin-top:22px">ARTICLES<span class="tag">Mạo từ</span></h1>
+<p style="color:var(--soft);margin-top:34px;max-width:430px">a · an · the · x — bài học, mindmap, mini-test và 65 câu trắc nghiệm có giải thích ngay.</p>
+<button class="pill" onclick="jump(1)">Lướt xuống để xem ↗</button>
+<div class="foot">Mạo từ · Articles</div>
+</section>
+
+<section class="sec" id="s1"><div class="rv"><h2 class="t">Phần 1 · Bản chất của mạo từ</h2>
+<div class="card"><p><b>Mạo từ (Articles)</b> là những từ bé nhỏ đứng <b>TRƯỚC danh từ</b>: <span class="ex">a, an, the</span>. Chúng như những “chiếc bảng chỉ đường”, cho người nghe biết danh từ sắp nhắc đến là:</p>
+<div class="two"><div class="warn bad"><b>Chung chung</b><br>Bất kỳ cái nào cũng được → <span class="ex">a / an</span></div><div class="warn ok2"><b>Cụ thể</b><br>Người nói và người nghe đều biết là cái nào → <span class="ex">the</span></div></div></div></div></section>
+
+<section class="sec" id="s2"><div class="rv"><h2 class="t">Mindmap · Hệ thống kiến thức</h2>
+<div class="mm"><div class="root">ARTICLES</div><div class="br">
+<div class="card b" onclick="jump(3)"><h3>A / AN</h3><small>Không xác định · chung chung</small><ul><li>a + âm <b>phụ âm</b> (a book)</li><li>an + âm <b>nguyên âm</b> (an apple)</li><li>Danh từ số ít, đếm được, nhắc lần đầu</li><li>⚠ Dựa vào <b>phát âm</b>: an hour, a university</li><li>Nghề nghiệp: a doctor, an engineer</li></ul></div>
+<div class="card b" onclick="jump(4)"><h3>THE</h3><small>Xác định · cụ thể</small><ul><li>Nhắc lại lần 2</li><li>Duy nhất: the sun, the moon</li><li>Có cụm bổ nghĩa phía sau</li><li>So sánh nhất &amp; số thứ tự</li><li>Biển, sông, núi; the UK, the US</li><li>the + adj (the rich); play the piano</li></ul></div>
+<div class="card b" onclick="jump(5)"><h3>X (không mạo từ)</h3><small>Zero article</small><ul><li>Số nhiều / không đếm được nói chung</li><li>Bữa ăn: have lunch</li><li>Môn học, ngôn ngữ, thể thao</li><li>Quốc gia, thành phố, đường phố</li><li>go to school / hospital (đúng mục đích)</li></ul></div>
+</div></div><p class="end">Chạm vào từng nhánh để nhảy tới phần học tương ứng ↓</p></div></section>
+
+<section class="sec" id="s3"><div class="rv"><h2 class="t">Phần 2 · Mạo từ không xác định (A / AN)</h2>
+<div class="card"><p>Dùng trước <b>danh từ số ít, đếm được</b> khi được nhắc đến <b>lần đầu</b> hoặc chỉ một thứ chung chung, chưa cụ thể.</p>
+<table class="tb"><tr><th>Dùng “A”</th><th>Dùng “AN”</th></tr><tr><td>Đứng trước danh từ có âm bắt đầu là <b>PHỤ ÂM</b>.<br>• a book (một quyển sách)<br>• a cat (một con mèo)<br>• a teacher (một giáo viên)</td><td>Đứng trước danh từ có âm bắt đầu là <b>NGUYÊN ÂM</b> (U, E, O, A, I – “Uể Oải”).<br>• an apple (một quả táo)<br>• an umbrella (một cái ô)<br>• an elephant (một con voi)</td></tr></table>
+<div class="warn"><b>⚠ LƯU Ý TỬ HUYỆT (BẪY PHÁT ÂM)</b><br>Quy tắc A/An phụ thuộc vào <b>CÁCH PHÁT ÂM</b>, không phải chữ cái viết ra.<br>• <b>an hour, an honest man</b>: chữ ‘h’ câm, âm đầu là ‘o’ (nguyên âm) → dùng <b>an</b>.<br>• <b>a university, a uniform</b>: bắt đầu bằng ‘u’ nhưng đọc là ‘ju’ (phụ âm ‘y’) → dùng <b>a</b>.</div></div>
+<h3>Mini-test 1 · Điền A hoặc AN</h3><div class="card" id="m1"></div></div></section>
+
+<section class="sec" id="s4"><div class="rv"><h2 class="t">Phần 3 · Mạo từ xác định (THE)</h2>
+<div class="card"><p>Dùng cho danh từ (số ít, số nhiều hay không đếm được) khi người nói và người nghe <b>đều biết rõ</b> đang nói về cái gì/người nào.</p>
+<table class="tb"><tr><th>Cách dùng của “THE”</th><th>Ví dụ minh họa</th></tr>
+<tr><td><b>1. Nhắc lại lần thứ 2</b>: vật đã nhắc ở câu trước</td><td>I have a dog and a cat. <b>The</b> dog is very smart.</td></tr>
+<tr><td><b>2. Vật duy nhất trên đời</b></td><td>the sun, the moon, the earth, the world</td></tr>
+<tr><td><b>3. Có cụm từ bổ nghĩa phía sau</b></td><td><b>The</b> girl in the blue shirt is my sister.</td></tr>
+<tr><td><b>4. So sánh nhất &amp; số thứ tự</b></td><td>He is <b>the</b> best student. / It is <b>the</b> first time I go here.</td></tr>
+<tr><td><b>5. Tên biển, đại dương, sông, dãy núi, quần đảo</b></td><td>the Pacific Ocean, the Alps, the Red River</td></tr>
+<tr><td><b>6. The + Tính từ</b>: một nhóm người trong xã hội</td><td>the rich, the poor, the old</td></tr>
+<tr><td><b>7. Tên nhạc cụ</b> sau động từ “play”</td><td>She plays <b>the</b> piano very well.</td></tr></table>
+<p style="color:var(--soft);font-size:14px">* “The” đọc là <b>/ði/</b> trước nguyên âm (the apple, the earth) và <b>/ðə/</b> trước phụ âm (the sun).</p></div>
+<h3>Mini-test 2 · Điền A, AN hoặc THE</h3><div class="card" id="m2"></div></div></section>
+
+<section class="sec" id="s5"><div class="rv"><h2 class="t">Phần 4 · Không dùng mạo từ (x / ∅)</h2>
+<div class="card"><table class="tb"><tr><th>Trường hợp KHÔNG dùng</th><th>Ví dụ</th></tr>
+<tr><td><b>1.</b> Danh từ số nhiều / không đếm được nói chung</td><td>I like cats. Water is important.</td></tr>
+<tr><td><b>2.</b> Các bữa ăn trong ngày</td><td>have breakfast, lunch, dinner</td></tr>
+<tr><td><b>3.</b> Môn học, ngôn ngữ</td><td>I study Math and English.</td></tr>
+<tr><td><b>4.</b> Môn thể thao</td><td>He plays football and tennis.</td></tr>
+<tr><td><b>5.</b> Tên quốc gia, thành phố, đường phố (trừ nước có từ <i>States, Kingdom, Republic</i> → dùng THE: the US, the UK)</td><td>I live in Vietnam. He is in Hanoi.</td></tr></table>
+<div class="warn"><b>⚠ KIẾN THỨC NÂNG CAO: SCHOOL, HOSPITAL, PRISON</b></div>
+<div class="two"><div class="warn ok2"><b>KHÔNG DÙNG THE</b> (đúng mục đích chính)<br>• go to school: đi học<br>• go to hospital: đi nằm viện (bị ốm)</div><div class="warn bad"><b>DÙNG THE</b> (mục đích khác/đến thăm)<br>• go to the school: đến trường (họp phụ huynh, gặp giáo viên)<br>• go to the hospital: đến bệnh viện thăm người ốm</div></div></div>
+<h3>Mini-test 3 · Điền THE hoặc X</h3><div class="card" id="m3"></div></div></section>
+
+<section class="sec" id="s6"><div class="rv"><h2 class="t">Phần 5 · Trắc nghiệm lý thuyết (15 câu)</h2><div class="card" id="q1"></div></div></section>
+<section class="sec" id="s7"><div class="rv"><h2 class="t">Phần 6 · Trắc nghiệm thực chiến (50 câu)</h2><p style="color:var(--soft)">Chọn a / an / the hoặc x (không điền mạo từ).</p><div class="card" id="q2"></div><div class="end">✦ Hoàn thành! Chúc bạn dùng mạo từ thật chuẩn ✦<br><button class="btn" onclick="jump(0)">↑ Về đầu trang</button></div></div></section>
+
+<script>
+const Q=(q,o,a,e)=>({q,bl:[o],a:[a],e});
+const mini=(q,o,a,e)=>({q,bl:q.match(/_{3,}/g)?q.match(/_{3,}/g).map(()=>o):[o],a,e});
+const M1=[mini('It takes me _______ hour to walk to school.',['a','an'],[1],'Hour có chữ h câm, đọc /aʊər/ bắt đầu bằng nguyên âm → <b>an hour</b>.'),mini('My brother is _______ engineer.',['a','an'],[1],'Engineer bắt đầu bằng nguyên âm /e/ → <b>an</b> (chỉ nghề nghiệp).'),mini('She bought _______ uniform for the new school year.',['a','an'],[0],'Uniform đọc /ˈjuːnɪfɔːm/, bắt đầu bằng phụ âm /j/ → <b>a</b>.')];
+const M2=[mini('_______ earth goes around _______ sun.',['a','an','the'],[2,2],'Earth và sun đều là vật <b>duy nhất</b> → <b>The</b> earth … <b>the</b> sun.'),mini('I bought a shirt yesterday. _______ shirt is very expensive.',['a','an','the'],[2],'Shirt đã nhắc ở câu trước (lần 2) → <b>The</b>.'),mini('Neil Armstrong was _______ first man to walk on the moon.',['a','an','the'],[2],'Số thứ tự (first) luôn đi với <b>the</b>.')];
+const M3=[mini('My favorite sport is _______ badminton.',['the','x'],[1],'Tên môn thể thao không dùng mạo từ → <b>x</b>.'),mini('We live in _______ United States.',['the','x'],[0],'Tên nước có chữ States → bắt buộc dùng <b>the</b> (the US).'),mini('Mary is a student. She goes to _______ school every day.',['the','x'],[1],'Đi học đúng mục đích chính → go to school (<b>x</b>).')];
+const T=['Chức năng chính của Mạo từ trong câu là gì?|Thay thế danh từ|Đứng trước danh từ để chỉ sự xác định|Nối các mệnh đề|Chỉ hành động|1|Mạo từ đứng trước danh từ, cho biết danh từ đó chung chung hay xác định.','Mạo từ nào được gọi là “Mạo từ xác định”?|A|An|The|A và An|2|<b>The</b> là mạo từ xác định; a/an là mạo từ không xác định.','Nguyên tắc quan trọng nhất để quyết định dùng “A” hay “An” là gì?|Dựa vào cách viết chữ cái đầu|Dựa vào số lượng danh từ|Dựa vào cách phát âm của từ đi liền sau|Dựa vào nghĩa của từ|2|A hay An phụ thuộc vào <b>âm đầu phát ra</b> (nguyên âm/phụ âm), không phải mặt chữ.','Mạo từ nào dùng trước danh từ là vật DUY NHẤT trên thế giới (sun, moon)?|A|An|X (Không điền)|The|3|Vật duy nhất → <b>the</b> sun, <b>the</b> moon.','Khi nói về các môn học (Math, History) hoặc các môn thể thao (football), ta dùng mạo từ gì?|A|The|X (Không điền)|An|2|Môn học và môn thể thao <b>không dùng mạo từ</b>.','Trong cấu trúc So sánh nhất hoặc Số thứ tự (first, second), ta LUÔN dùng:|The|A|An|X (Không điền)|0|So sánh nhất và số thứ tự luôn có <b>the</b>.','Đứng trước các Nhạc cụ (piano, guitar) theo sau động từ “play”, ta dùng:|A|An|X (Không điền)|The|3|play + nhạc cụ → <b>the</b> piano / the guitar.','Khi một danh từ đếm được số ít được nhắc đến LẦN ĐẦU TIÊN, ta dùng:|The|A / An|X (Không điền)|The / An|1|Nhắc lần đầu, chưa xác định → <b>a / an</b>.','“Hour” và “Honest” bắt đầu bằng chữ ‘h’, ta điền mạo từ gì đằng trước?|A|The|An|X (Không điền)|2|Hour /aʊər/ và honest /ˈɒnɪst/ câm h, đọc bằng nguyên âm → <b>an</b>.','“University” và “Uniform”, ta điền mạo từ gì đằng trước?|A|An|The|X (Không điền)|0|University /juː…/ đọc bằng phụ âm /j/ → <b>a</b>.','Khi nói về Nghề nghiệp của một người (She is ___ doctor), ta dùng:|The|X (Không điền)|A / An|Luôn dùng An|2|Nghề nghiệp dùng <b>a / an</b> (an khi âm đầu là nguyên âm).','Cấu trúc “The + Tính từ” (the rich, the poor) mang ý nghĩa gì?|Nhấn mạnh tính từ đó|Chỉ một nhóm người trong xã hội|Chỉ sự vật duy nhất|So sánh nhất|1|The + adj = <b>một nhóm người</b> trong xã hội.','Cụm từ “go to the hospital” (CÓ THE) có nghĩa là:|Đi nằm viện (bị ốm)|Trở thành bác sĩ|Đến bệnh viện vì mục đích khác (thăm bệnh)|Đi dạo quanh bệnh viện|2|Go to <b>the</b> hospital: đến vì mục đích khác (thăm bệnh). Còn go to hospital mới là đi nằm viện.','Tên các quốc gia như Vietnam, Japan, France sẽ dùng mạo từ gì?|A|The|An|X (Không điền)|3|Tên quốc gia thường <b>không dùng mạo từ</b> (trừ the UK, the US…).','Các bữa ăn trong ngày như Breakfast, Lunch, Dinner dùng mạo từ gì?|A|An|The|X (Không điền)|3|Tên bữa ăn <b>không dùng mạo từ</b>: have breakfast.'].map(s=>{const a=s.split('|');return Q(a[0],a.slice(1,5),+a[5],a[6])});
+const R=['My father is _______ engineer.|1|Nghề nghiệp dùng a/an; engineer bắt đầu bằng nguyên âm /e/ → <b>an</b>.','We live in _______ big house in the countryside.|0|Nhắc lần đầu, big bắt đầu bằng phụ âm → <b>a</b>.','I bought a new dress. _______ dress is very beautiful.|2|Dress đã nhắc ở câu trước (lần 2) → <b>The</b>.','_______ sun rises in the east and sets in the west.|2|Mặt trời là vật duy nhất → <b>The</b> sun.','I love playing _______ football with my friends after school.|3|Môn thể thao không dùng mạo từ → <b>x</b>.','Could you pass me _______ salt, please? (Muối trên bàn ăn)|2|Muối trên bàn mà cả hai cùng biết → <b>the</b> salt.','She is reading _______ interesting book.|1|Interesting bắt đầu bằng nguyên âm /ɪ/ → <b>an</b>.','We usually have _______ breakfast at 7 o’clock.|3|Bữa ăn không dùng mạo từ → have breakfast (<b>x</b>).','Have you ever visited _______ United Kingdom?|2|United Kingdom có chữ Kingdom → <b>the</b> UK.','He is learning to play _______ piano.|2|play + nhạc cụ → <b>the</b> piano.','_______ Pacific Ocean is the largest ocean in the world.|2|Tên đại dương → <b>The</b> Pacific Ocean.','Look at _______ sky! It is going to rain.|2|Bầu trời là vật duy nhất, ai cũng biết → <b>the</b> sky.','She wants to be _______ doctor in the future.|0|Nghề nghiệp → <b>a</b> doctor (doctor bắt đầu bằng phụ âm).','I need _______ hour to finish this exercise.|1|Hour có h câm, đọc /aʊər/ → <b>an</b> hour.','My brother is studying at _______ university in Hanoi.|0|University đọc /juː/ (phụ âm) → <b>a</b> university.','_______ cats are very independent animals.|3|Danh từ số nhiều nói chung → <b>x</b>.','Paris is _______ capital of France.|2|Cụm bổ nghĩa “of France”, chỉ một thủ đô duy nhất → <b>the</b>.','We should help _______ poor and the sick in our society.|2|the + tính từ chỉ nhóm người → <b>the</b> poor and the sick.','He is _______ most intelligent student in my class.|2|So sánh nhất → <b>the</b> most intelligent.','I went to _______ hospital to visit my grandfather yesterday.|2|Đến thăm ông (mục đích khác) → go to <b>the</b> hospital.','She is wearing _______ beautiful dress today.|0|Beautiful bắt đầu bằng phụ âm /b/, nhắc lần đầu → <b>a</b>.','They traveled to _______ Japan last summer.|3|Tên quốc gia không dùng mạo từ → <b>x</b>.','I want to eat _______ apple.|1|Apple bắt đầu bằng nguyên âm → <b>an</b>.','Did you see _______ man who stole my bag?|2|Có mệnh đề bổ nghĩa “who stole my bag” → người cụ thể → <b>the</b> man.','She always listens to _______ music before going to bed.|3|Music (không đếm được, nói chung) → <b>x</b>.','We had _______ great time at the party yesterday.|0|have a great time; great bắt đầu bằng phụ âm → <b>a</b>.','He is _______ honest person. You can trust him.|1|Honest có h câm → <b>an</b>.','Can you turn off _______ television, please?|2|Cái tivi cụ thể, cả hai cùng biết → <b>the</b>.','_______ water boils at 100 degrees Celsius.|3|Water (không đếm được, nói chung) → <b>x</b>.','He likes playing _______ guitar in his free time.|2|play + nhạc cụ → <b>the</b> guitar.','What is _______ longest river in the world?|2|So sánh nhất (longest) → <b>the</b>.','I have a cat and a dog. _______ dog is very friendly.|2|Dog đã nhắc lần 1 (a dog) → lần 2 dùng <b>the</b>.','They bought _______ expensive car last week.|1|Expensive bắt đầu bằng nguyên âm /ɪ/ → <b>an</b>.','_______ Moon goes around the Earth.|2|Mặt trăng là vật duy nhất → <b>The</b> Moon.','She is _______ only child in her family.|2|Only (duy nhất) → <b>the</b> only child.','We had _______ lunch at a nice restaurant.|3|Bữa ăn (lunch) không dùng mạo từ → <b>x</b>.','There is _______ pen on the table.|0|Nhắc lần đầu, pen bắt đầu bằng phụ âm → <b>a</b>.','_______ rich should help _______ poor.|0|The + tính từ chỉ nhóm người: <b>the</b> rich, <b>the</b> poor.','I think _______ Math is a difficult subject.|3|Môn học → <b>x</b>.','We visited _______ United States of America last year.|2|United States có chữ States → <b>the</b> US.','It is _______ honor to meet you here.|1|Honor có h câm → <b>an</b>.','_______ dogs are my favorite animals.|3|Danh từ số nhiều nói chung → <b>x</b>.','He always stays in bed until _______ noon.|3|“until noon” là cách nói chỉ thời điểm, không dùng mạo từ → <b>x</b>.','Mary is _______ best student in our class.|2|So sánh nhất → <b>the</b> best.','Please close _______ door when you leave.|2|Cánh cửa cụ thể, cả hai cùng biết → <b>the</b> door.','Do you play _______ tennis?|3|Môn thể thao → <b>x</b>.','My mother is in _______ kitchen right now.|2|Nhà bếp trong nhà, cả hai cùng biết → <b>the</b> kitchen.','I saw _______ accident on my way to work.|1|Accident bắt đầu bằng nguyên âm → <b>an</b>.','She is wearing _______ uniform today.|0|Uniform đọc /juː/ (phụ âm) → <b>a</b>.','We need to protect _______ environment.|2|Môi trường duy nhất, ai cũng biết → <b>the</b> environment.']
+.map((s,n)=>{const a=s.split('|'),cap=a[0].trim().startsWith('_');let o=['a','an','the','x'];if(cap)o=o.map(x=>x[0].toUpperCase()+x.slice(1));if(n==37)o=['The / the','A / a','X / X','The / x'];return Q(a[0],o,+a[1],a[2])});
+
+/* sound */
+let AC;function tone(seq,type,d){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const t=AC.currentTime;seq.forEach((f,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(.0001,t+i*d);g.gain.exponentialRampToValueAtTime(.25,t+i*d+.02);g.gain.exponentialRampToValueAtTime(.0001,t+i*d+d);o.connect(g);g.connect(AC.destination);o.start(t+i*d);o.stop(t+i*d+d+.05)})}catch(e){}}
+const good=()=>tone([523,659,784,1047],'sine',.11),bad=()=>tone([220,165],'sawtooth',.2);
+const $=s=>document.querySelector(s);
+
+/* quiz: nhiều chỗ trống, chọn xong tất cả là chấm */
+function quiz(el,items,lab){let i=0,s=0;(function show(){
+if(i>=items.length){const r=s/items.length;el.innerHTML=`<div class="done"><div class="sc">${s}/${items.length}</div><p>${r>=.8?'Xuất sắc! ✦':r>=.5?'Khá tốt, cố thêm nhé!':'Ôn lại phần lý thuyết rồi thử lại nhé!'}</p><button class="btn">Làm lại</button></div>`;el.querySelector('button').onclick=()=>{i=0;s=0;show()};if(r>=.5)good();return}
+const it=items[i],n=it.bl.length,sel=Array(n).fill(-1);let fin=false,k=0;
+const qh=/_{3,}/.test(it.q)?it.q.replace(/_{3,}/g,()=>`<span class="gap" id="g${k++}">…</span>`):it.q;
+el.innerHTML=`<div class="prog"><i style="width:${i/items.length*100}%"></i></div><div class="meta"><span>Câu ${i+1}/${items.length}</span><span>Điểm: ${s}</span></div><div class="qq">${qh}</div>`+it.bl.map((o,j)=>`${n>1?`<span class="lb">Chỗ trống ${j+1}</span>`:''}<div class="ops ${o.every(x=>x.length<12)?'short':''}" data-j="${j}">${o.map((x,m)=>`<button class="opt" data-m="${m}">${lab?'ABCD'[m]+'. ':''}${x}</button>`).join('')}</div>`).join('')+'<div id="ex"></div>';
+el.querySelectorAll('.ops').forEach(g=>g.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{if(fin)return;const j=+g.dataset.j,m=+b.dataset.m;sel[j]=m;g.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');const gp=el.querySelector('#g'+j);if(gp)gp.textContent=it.bl[j][m];if(sel.includes(-1))return;fin=true;let ok=true;
+el.querySelectorAll('.ops').forEach((gg,jj)=>{const bs=gg.querySelectorAll('.opt');bs.forEach(x=>{x.disabled=true;x.classList.remove('sel')});if(sel[jj]==it.a[jj])bs[sel[jj]].classList.add('ok');else{ok=false;bs[sel[jj]].classList.add('no');bs[it.a[jj]].classList.add('ok')}const gp=el.querySelector('#g'+jj);if(gp)gp.textContent=it.bl[jj][it.a[jj]]});
+ok?(s++,good()):bad();
+el.querySelector('#ex').innerHTML=`<div class="exp">${ok?'✅ Chính xác!':'❌ Chưa đúng.'} Đáp án: <b>${it.a.map((a,j)=>(lab?'ABCD'[a]+'. ':'')+it.bl[j][a]).join(' – ')}</b><br>${it.e}</div><button class="btn" id="nx">${i+1<items.length?'Câu tiếp ➜':'Xem kết quả'}</button>`;el.querySelector('#nx').onclick=()=>{i++;show()}}))})()}
+quiz($('#m1'),M1);quiz($('#m2'),M2);quiz($('#m3'),M3);quiz($('#q1'),T,1);quiz($('#q2'),R,1);
+
+/* scroll fx */
+const secs=[...document.querySelectorAll('.sec')],names=['Mở đầu','Bản chất','Mindmap','A / An','The','Zero (x)','Lý thuyết','Thực chiến'];
+$('#dots').innerHTML=secs.map((s,i)=>`<button title="${names[i]}" aria-label="${names[i]}" onclick="jump(${i})"></button>`).join('');
+function jump(i){secs[i].scrollIntoView({behavior:'smooth'})}
+function onScroll(){const h=document.documentElement;$('#bar').style.width=scrollY/(h.scrollHeight-innerHeight||1)*100+'%';let c=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.5)c=i});document.querySelectorAll('#dots button').forEach((b,i)=>b.classList.toggle('on',i==c))}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.06});document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+</script>
+</body>
+</html>
